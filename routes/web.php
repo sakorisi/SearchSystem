@@ -20,9 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home', AdminController@home)->middleware('auth');
-Route::get('home', ClerkController@home)->middleware('auth');
-Route::get('home', CustomerController@home)->middleware('auth');
+Route::get('home', 'AdminController@home')->middleware('auth');
+Route::get('home', 'ClerkController@home')->middleware('auth');
+Route::get('home', 'CustomerController@home')->middleware('auth');
 
 Route::get('shop/home', 'ShopController@home');
 Route::post('shop/home', 'ShopController@search');
